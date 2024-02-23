@@ -3,19 +3,40 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@capacitor/android": "5.6.0",
+    "@capacitor/app": "next",
+    "@capacitor/camera": "^5.0.9",
+    "@capacitor/core": "next",
+    "@capacitor/haptics": "next",
+    "@capacitor/keyboard": "next",
+    "@capacitor/status-bar": "next",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@ionic/pwa-elements": "^3.2.2",
+    "@ionic/react": "^7.7.0",
+    "@supabase/supabase-js": "^2.39.3",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
+    "bootstrap": "^5.3.2",
+    "react": "^18.0.0",
+    "react-bootstrap": "^2.10.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
+    "react-webcam": "^7.2.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "ionic:build": "npm run build",
+    "ionic:serve": "npm run start"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +55,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@capacitor/cli": "5.6.0"
   }
 }

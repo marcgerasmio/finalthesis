@@ -1,0 +1,7 @@
+{
+  "name": "finalthesis",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}
