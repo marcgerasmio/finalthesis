@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">finalthesis</string>
-    <string name="title_activity_main">finalthesis</string>
+    <string name="app_name">AssessMate</string>
+    <string name="title_activity_main">AssessMate</string>
     <string name="package_name">com.finalthesis</string>
     <string name="custom_url_scheme">com.finalthesis</string>
 </resources>

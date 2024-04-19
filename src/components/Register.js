@@ -2,12 +2,13 @@ import '../App.css';
 import React, { useState } from 'react';
 import supabase from './config/supabaseClient';
 import { useNavigate,Link } from 'react-router-dom';
-import { Container,Image,Form,FloatingLabel,Button} from 'react-bootstrap';
+import { Container,Image,Form,FloatingLabel,Button,Spinner } from 'react-bootstrap';
 
 function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
   const [confirmPassword, setConfirmPassword] = useState('');
   const navigate = useNavigate();
 
@@ -29,18 +30,21 @@ function Register() {
 
   const handleRegister = (e) => {
     e.preventDefault();
+    setLoading(true);
     console.log('Name:', name);
     console.log('Email:', email);
     console.log('Password:', password);
     console.log('Confirm Password:', confirmPassword);
+    checkpass(); // Call checkpass to proceed with registration
   };
 
   const checkpass = () => {
     if(password === confirmPassword){
-        register();
+      register();
     }
     else{
-        alert("PASSWORD DO NOT MATCH!");
+      alert("PASSWORD DO NOT MATCH!");
+      setLoading(false); 
     }
   }
 
@@ -61,6 +65,8 @@ function Register() {
     } 
     catch (error) {
       console.error('Error during login:', error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -111,7 +117,18 @@ function Register() {
                 data-bs-toggle="modal" 
                 data-bs-target="#myModal"
               >
-                Register
+                {loading ? (
+                  <>
+                    <Spinner
+                      as="span"
+                      animation="grow"
+                      size="sm"
+                      role="status"
+                      aria-hidden="true"
+                    />
+                      Loading...
+                  </>
+                ) : "Register"}
               </Button>
             </div>
             <div className="modal fade" id="myModal">

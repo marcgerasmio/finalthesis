@@ -15,16 +15,12 @@
   }
 
   .bttn{
-    background-color: #FF8A00 !important;
-    border-color: #FF8A00 !important;
-  }
-
-  .btn-icons{
-    color: #250000;
+    background-color: #EA9010 !important;
+    border-color: #EA9010 !important;
   }
 
   .nav-bottom{
-    background-color: #E9E9E9;
+    background-color: #fefefe;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
 
@@ -62,4 +58,44 @@
     top: 10px;
     right: 10px;
     cursor: pointer;
+  }
+
+  .btn-icons.activeClicked {
+    color: #EA9010;
+  }
+
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 10px !important;
+  }
+
+  .scrollable-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow-x: hidden; 
+  }
+
+  .scrollable-content {
+    overflow-y: auto; 
+    height: 70vh;
+    padding: 10px;
+  }
+
+  .custom-accordion {
+    border-radius: 12px;
+    overflow: hidden; 
+  }
+
+  .custom-form-control:focus {
+    border-color: #264027 !important; 
+  }
+
+  .custom-search-bar {
+    border-color: #EA9010 !important;
+    outline: none;
+  }
+
+  .custom-search-bar:focus {
+    border-color: #EA9010 !important;
   }
